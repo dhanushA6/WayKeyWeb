@@ -8,6 +8,7 @@ body {
     color: #333;
     margin: 0;
     padding: 20px;
+
 }
 
 h1 {
@@ -45,7 +46,7 @@ h1 {
 #game-board {
     grid-template-columns: repeat(4, 100px);
     gap: 15px;
-    margin-top: 20px;
+    margin-top: -10px;
     opacity: 0;
     /* Initially hidden */
     transition: opacity 0.5s ease-in;
