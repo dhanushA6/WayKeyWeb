@@ -1,0 +1,318 @@
+h1 {
+  text-align:center; 
+  font-family: 'Playfair Display SC', serif;
+  font-weight: 700;
+  }
+
+h1.hero-heading {
+  text-align:center;
+  font-size:4em; 
+  line-height:0.9em; 
+  letter-spacing:15px;
+  color:#0B5563;
+  font-weight:700;
+  }
+
+h1.hero-heading span {
+  font-size:0.5em
+}
+
+.my-5 p{
+	font-size:1.2rem;	
+}
+
+/* -----------------company----------------------- */
+.company {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.company-info {
+  width: 100%;
+}
+
+.company-info span {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.company-info span .our {
+  color: #ffdc0e;
+}
+
+.company-info p{
+  font-size: 1.1rem;
+}
+
+.company-info1 span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.company-info1 span .our {
+  color: #ffdc0e;
+}
+
+.company-info1 p{
+  font-size: 1.1rem;
+}
+
+
+.con-title{
+  padding-bottom:0.5em; 
+  text-align:center;
+  font-size:2.5em; 
+  line-height:1.2em; 
+  color:#0B5563;
+  font-weight:400;
+}
+
+.cardf-title{
+  padding-bottom:0.5em; 
+  text-align:center;
+  font-size:1.7em; 
+  line-height:1.2em; 
+  color:#0B5563;
+  font-weight:400;
+}
+
+ .hero-section {
+            background: linear-gradient(to right, rgba(44, 62, 80, 0.8), rgba(52, 73, 94, 0.8)), url('your-image-path.jpg') no-repeat center center/cover;
+            color: white;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .hero-section .content {
+            z-index: 2;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .intro-section, .video-section, .features, .team, .credits {
+            padding: 0px 20px;
+        }
+        .video-placeholder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #2c3e50;
+            font-size: 1.2rem;
+        }
+        .team-member {
+            text-align: center;
+        }
+        .team-member img {
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .credits {
+            background-color: #2c3e50;
+            color: white;
+        }
+        
+        /* Team Section */
+.team {
+    padding: 0px 2px;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.team-member {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member h3 {
+    color: #2980b9;
+}
+
+.credits {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.credits ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.credits ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.credits ul li:last-child {
+    border-bottom: none;
+}
+
+
+/* en tab design */
+ul.tabs{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+ul.tabs li{
+	background: none;
+	color: #2B2B2B;
+	display:inline-flex;
+	padding: 10px 7px;
+	cursor: pointer;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+ul.tabs li.current{
+	background: #ededed;
+	color: #4D2D2D;
+	font-size: 1.2em;
+}
+
+.tab-content-en{
+	display: none;
+	/* background: #ededed; */
+	padding: 15px;
+	height: auto;
+	border: 1em solid #ededed;
+}
+
+.tab-content-en.current{
+	display: inherit;
+}
+
+
+#enConvertArea{
+	text-align: center;
+}
+#enConvertArea select{
+	padding: 9px 10px;
+	background: #fff;
+	font-weight: bold;
+	width: 100%;
+}
+#enConvertArea input{
+	padding: 9px 10px;
+}	
+	
+.eNcard{
+	padding: 1em;
+	width: 100%;
+	margin: 2em auto;
+	border-radius: 16px;
+	background: #fff;
+	--shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+	box-shadow: var(--shadow);
+	font-size: 1.5em;
+	height: 250px;
+}
+.eNcard p{
+	padding-left: 0.5em;
+	text-align: left;
+}
+.vl {
+  border-left: 5px solid #D47B7A;
+  height: 200px;
+}
+
+.temperature-card {
+    display: inline-block;
+    padding: 20px 30px;
+    background: white;
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.temperature-value {
+    display: block;
+    font-size: 48px;
+    color: #333;
+}
+
+.temperature-unit {
+    font-size: 24px;
+    color: #555;
+}
+
+ul.tabsV{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+ul.tabsV li{
+	background: none;
+	color: #2B2B2B;
+	display:inline-flex;
+	padding: 10px 7px;
+	cursor: pointer;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+ul.tabsV li.current{
+	background: #ededed;
+	color: #4D2D2D;
+	font-size: 1.2em;
+}
+
+.tab-content-V{
+	display: none;
+	/* background: #ededed; */
+	padding: 15px;
+	height: auto;
+	border: 1em solid #ededed;
+}
+
+.tab-content-V.current{
+	display: inherit;
+}
+
+.vlG {
+  border-right: 5px solid #04c49c;
+  height: 75px;
+}
+
+#gamesR td{
+	font-size: 1.2em;
+}
+
+#gamesR table{
+	cursor: pointer;
+}
+

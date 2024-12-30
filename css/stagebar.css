@@ -1,0 +1,291 @@
+header.main-header {
+  position: relative; /* Allows other elements to flow naturally below */
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 10px 10px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap; /* Allows columns to stack on smaller screens */
+  gap: 20px; /* Space between columns */
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative; /* Default flow starts right after the header */
+}
+
+#container {
+    width: 100%;
+    /* max-width: 700px; */
+    overflow: auto;
+}
+
+#toolAreaInner{
+	height: auto;
+	overflow: auto;
+} 
+
+#resultContent {
+	margin: 0em; /* Space for the fixed header */
+    padding: 0em;
+    height: calc(100% - 100px); /* Full height minus header height */
+    overflow-y: auto; /* Enables vertical scrolling */
+}  
+.h2, h2 {
+    font-size: 1.2rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Auto width for image, remaining space for text */
+  align-items: center; /* Align items vertically */
+  gap: 0px; /* Space between the image and text */
+}
+
+.grid-image {
+  width: 40px; /* Adjust the image size */
+  aspect-ratio:3/2;
+  object-fit:contain;
+  mix-bland-mode: color-burn;
+}
+
+.grid-text {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 0px;
+    color: #fff;
+}
+
+.progressbar {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 1em;
+    counter-reset: step;
+    padding-inline:2em;
+    padding-top: 1em;
+}
+
+.progress-step::before {
+    content: attr(data-title); /* Use the custom text stored in data-title */
+    position: absolute;
+    top: 40px;  /* Adjust this value to position the label */
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+    width: 80px; /* Set width for centering the text */
+    /* transform: translateX(-50%); */
+}
+
+
+.progress {
+    height: 5px;
+    background-color: #4CAF50;
+    width: 0%;
+    position: absolute;
+    top: 18px;
+    left: 45px;
+    transform: translateY(-50%);
+    transition: width 0.3s ease;
+}
+
+.progress-step {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.progress-step::before {
+    content: attr(data-title);
+    position: absolute;
+    top: 40px;
+    font-size: 12px;
+    color: #333;
+}
+
+.progress-step-active {
+    background-color: #4CAF50;
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step-active {
+    display: block;
+}
+
+
+button.btn-prev {
+    background-color: #f44336;
+}
+
+button.btn-submit {
+    background-color: #4CAF50;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+#completMsg{
+	width: 100%;
+    margin: 12em;
+    font-size: 32px;
+    color: #666;
+}
+
+.quiz-options{
+	font-size: 1rem;
+	font-weight: bold;
+	margin-top: 1em;
+}
+
+#qusArea{
+	margin-top: 1em;
+	margin-bottom: 1em;
+    padding: 2em;
+}
+
+#actNo{
+	background: #369694;
+	padding: 5px;
+}
+
+#qusNo{
+	background: #f4a64e;
+	padding: 5px;
+}
+
+#qus{
+	background: #46435d;
+	padding:1.5em;
+}
+
+#opt{
+	background: #ffd483;padding:0.5em;
+}
+
+#qusAudio{
+	font-size: 2em;
+	color: #fff;
+	padding: 10px;
+}
+#question{
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+    padding: 0.5em;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 2, 0.5);
+    background: #abd8a6;
+    border: 5px solid #666;
+    font-size: 1.2vw;
+}
+
+#answers{
+    padding: 0.5em;
+    border-radius: 16px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 2, 0.5);
+    background: #fff;
+    border: 5px solid #abd8a6;
+}
+
+/* wrong or correct icon color */
+.icon {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.correct {
+    color: green;
+}
+
+.wrong {
+    color: red;
+}
+
+
+  /* Styling for the GIF overlay */
+		#activityPart {
+            position: relative;
+            z-index: 1; /* Lower than GIF overlay */
+            padding: 10px 15px;
+            height: 85dvh;
+        }
+
+        .background-gif-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            z-index: 999; /* Ensure it's on top of everything */
+            pointer-events: none; /* Allows clicks to pass through to underlying elements */
+            opacity: 0.7; /* Optional: adjust opacity for visibility */
+        }
+
+        .background-gif-overlay1 {
+            position: fixed;
+            top: 0;
+            right: 12%;
+            object-fit: cover;
+            z-index: 999; /* Ensure it's on top of everything */
+            pointer-events: none; /* Allows clicks to pass through to underlying elements */
+            opacity: 0.7; /* Optional: adjust opacity for visibility */
+        }
+
+        /* Content area styling */
+        #activityArea{
+			background: #49444b;
+		    padding: 0em;
+		    border-radius: 10px;
+		    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #toolArea {
+            background-color: white;
+            padding: 20px;
+        }
+        
+.gif-container {
+    animation: playOnce 5s steps(10, end);
+    overflow: hidden;
+  }
+  @keyframes playOnce {
+    0% { background-position: 0; }
+    100% { background-position: -500px; }
+  }        
+  
+  .item{
+  	width: clamp(200px, 50%, 300px);
+  }
+  
+  .iframe-container {
+      display: flex; /* Enables flexbox layout */
+      justify-content: center; /* Horizontally centers the iframe */
+      align-items: center; /* Vertically centers the iframe */
+      height: 500px; /* Full viewport height */
+    }
+    
+	#bookframe {
+      position: absolute; /* Position relative to parent div */
+      top: 0;
+      left: 0px;
+      width: 98%;
+      height: 100%;
+      border: none; /* Removes default iframe border */
+      padding: 1em;
+    }

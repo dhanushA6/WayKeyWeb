@@ -1,0 +1,150 @@
+#koarpori_textBoxContainer {
+    text-align: ce
+}
+.input-group1 {
+    margin: 1em auto;
+}
+#koarpori_addTextBox {
+    background-color: #9C4061;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    padding: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 0.5em;
+}
+
+.btn-plus {
+    background-color: #D47B7A;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    padding: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#koarpori_dropdownlistBoxContainer {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping if necessary */
+    gap: 10px; /* Optional: adds space between the select boxes */
+}
+
+#koarpori_dropdown-container {
+    display: block;
+    flex-wrap: wrap; /* Allows wrapping if necessary */
+    padding: 1em;
+    line-height: 3em;
+    margin-left: 1em;
+}
+
+.koarpori_form-control{
+    margin: 0; /* Ensures no additional margin is added by default styles */
+    flex: 1; /* Makes all selects take equal width */
+    max-width: 170px; /* Optional: limits the maximum width of each select box */
+    width: 157px;
+}
+
+.dropdownIN-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between the dropdowns */
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.dropdownIN {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dropdownIN label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.dropdownIN select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+
+.slide {
+    display: none;
+    width: 200%;
+}
+.slide.active {
+    display: block;
+}
+.nav-button {
+    margin-top: 10px;
+}
+
+#slide2_options {
+    display: none; /* Hide the options div by default */
+}
+
+/*** Slides ***/
+
+.slider {
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+  /*display: flex;*/
+  transition: transform 0.5s ease-in-out;
+  width: 50%; 
+  height: 58.5vh;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.radio-group {
+  font-size: 1em;
+  font-weight: bolder;
+}
+
+.radio-group label {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/*** Slides Ends ***/
