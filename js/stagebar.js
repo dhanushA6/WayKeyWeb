@@ -47,4 +47,4 @@ document.getElementById("switchMemoryGame").onclick = () =>
 document.getElementById("switchKuzhappi").onclick = () =>
   openTool("game-Kuzhappi");
 document.getElementById("switchOrupizhai2").onclick = () =>
-  openTool("game-orupizhai2");
+  openTool("game-orupizhai");
