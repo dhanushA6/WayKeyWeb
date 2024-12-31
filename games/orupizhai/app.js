@@ -37,23 +37,29 @@ function App() {
   const preloadAssets = () => {
     const promises = [];
 
-    // Preload images
     images.forEach((src) => {
       promises.push(
-        new Promise((resolve) => {
+        new Promise((resolve, reject) => {
           const img = new Image();
           img.src = src;
           img.onload = resolve;
+          img.onerror = (err) => {
+            console.error("Failed to load image:", src, err);
+            reject(err);
+          };
         })
       );
     });
 
-    // Preload sounds
     sounds.forEach((src) => {
       promises.push(
-        new Promise((resolve) => {
+        new Promise((resolve, reject) => {
           const audio = new Audio(src);
           audio.oncanplaythrough = resolve;
+          audio.onerror = (err) => {
+            console.error("Failed to load sound:", src, err);
+            reject(err);
+          };
         })
       );
     });
