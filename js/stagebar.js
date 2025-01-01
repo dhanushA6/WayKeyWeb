@@ -1,3 +1,4 @@
+//stagebar.js
 let currentGameScript = null; // Track the currently loaded game script
 
 function openTool(toolName) {
@@ -48,3 +49,6 @@ document.getElementById("switchKuzhappi").onclick = () =>
   openTool("game-Kuzhappi");
 document.getElementById("switchOrupizhai2").onclick = () =>
   openTool("game-orupizhai");
+document.getElementById("switchVerbGame").onclick = () =>
+  openTool("game-Mukkala");
+

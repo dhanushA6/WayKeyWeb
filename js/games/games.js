@@ -22,6 +22,7 @@ function initGame() {
         <button id="switchMemoryGame" class="game-switch-btn">Memory Game</button>
         <button id="switchKuzhappi" class="game-switch-btn">Kuzhappi</button>
         <button id="switchOrupizhai2" class="game-switch-btn">Orupizhai2</button>
+        <button id="switchVerbGame" class="game-switch-btn">Mukkala</button>
     </div>`;
 
   // Re-attach event listeners for buttons
@@ -31,10 +32,12 @@ function initGame() {
     openTool("game-Kuzhappi");
   document.getElementById("switchOrupizhai2").onclick = () =>
     openTool("game-orupizhai2");
+  document.getElementById("switchVerbGame").onclick = () =>
+    openTool("game-Mukkala"); // Switch to the new Verb Game
 
   const iframe = document.getElementById("bookframe");
   iframe.onload = () => {
-    // Send data to the iframe after it loads
+    // Send updated data to the iframe after it loads
     iframe.contentWindow.postMessage(
       { type: "tileData", data: getTileDistributions() },
       "*"
@@ -45,6 +48,10 @@ function initGame() {
     );
     iframe.contentWindow.postMessage(
       { type: "sentencesData", data: getSentences() },
+      "*"
+    );
+    iframe.contentWindow.postMessage(
+      { type: "verbsData", data: getVerbsData() }, // Send verbs data for the Verb Game
       "*"
     );
   };
@@ -67,6 +74,17 @@ function initGame() {
       );
     }
   });
+}
+
+// New function to retrieve verb data
+function getVerbsData() {
+  return [
+    { verb: "படித்தான்", tense: "past", complexity: "easy" },
+    { verb: "கொண்டிருக்கிறான்", tense: "present", complexity: "hard" },
+    { verb: "யெழுவான்", tense: "future", complexity: "easy" },
+    { verb: "வெண்டுதக்குள்ளு", tense: "future", complexity: "hard" },
+    { verb: "கீடுக்கிறான்", tense: "present", complexity: "hard" },
+  ];
 }
 
 // Data retrieval functions
