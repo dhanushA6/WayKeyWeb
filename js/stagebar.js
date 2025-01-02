@@ -51,4 +51,6 @@ document.getElementById("switchOrupizhai2").onclick = () =>
   openTool("game-orupizhai");
 document.getElementById("switchVerbGame").onclick = () =>
   openTool("game-Mukkala");
+document.getElementById("switchIdavalam").onclick = () =>
+  openTool("game-Idavalam"); // Switch to the new game Idavalam
 

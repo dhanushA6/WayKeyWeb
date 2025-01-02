@@ -23,6 +23,7 @@ function initGame() {
         <button id="switchKuzhappi" class="game-switch-btn">Kuzhappi</button>
         <button id="switchOrupizhai2" class="game-switch-btn">Orupizhai2</button>
         <button id="switchVerbGame" class="game-switch-btn">Mukkala</button>
+        <button id="switchIdavalam" class="game-switch-btn">Idavalam</button>
     </div>`;
 
   // Re-attach event listeners for buttons
@@ -33,7 +34,9 @@ function initGame() {
   document.getElementById("switchOrupizhai2").onclick = () =>
     openTool("game-orupizhai2");
   document.getElementById("switchVerbGame").onclick = () =>
-    openTool("game-Mukkala"); // Switch to the new Verb Game
+    openTool("game-Mukkala");
+  document.getElementById("switchIdavalam").onclick = () =>
+    openTool("game-Idavalam"); // Switch to the new game Idavalam
 
   const iframe = document.getElementById("bookframe");
   iframe.onload = () => {
@@ -51,7 +54,11 @@ function initGame() {
       "*"
     );
     iframe.contentWindow.postMessage(
-      { type: "verbsData", data: getVerbsData() }, // Send verbs data for the Verb Game
+      { type: "verbsData", data: getVerbsData() },
+      "*"
+    );
+    iframe.contentWindow.postMessage(
+      { type: "wordsData", data: getWordsData() }, 
       "*"
     );
   };
@@ -147,6 +154,48 @@ function getSentences() {
       errorPosition: 3,
       explanation:
         "குளத்தில் என்பது சரி. குலத்தில் என்பதற்கு இனத்தில் என்று பொருளாகும். ஆதலால் குலத்தில் என்பது பிழை ",
+    },
+  ];
+}
+
+// New function to retrieve words data for Idavalam
+function getWordsData() {
+  return [
+    {
+      english: "Bird",
+      correctTamil: "பறவை",
+      incorrectTamil: "பரவை",
+      difficulty: "Easy",
+    },
+    {
+      english: "Sun",
+      correctTamil: "சூரியன்",
+      incorrectTamil: "சூரியம்",
+      difficulty: "Easy",
+    },
+    {
+      english: "Apple",
+      correctTamil: "ஆப்பிள்",
+      incorrectTamil: "ஆபிள்",
+      difficulty: "Medium",
+    },
+    {
+      english: "Cloud",
+      correctTamil: "மேகம்",
+      incorrectTamil: "மேகம",
+      difficulty: "Medium",
+    },
+    {
+      english: "Elephant",
+      correctTamil: "யானை",
+      incorrectTamil: "யனாய்",
+      difficulty: "Hard",
+    },
+    {
+      english: "River",
+      correctTamil: "ஆறு",
+      incorrectTamil: "அறு",
+      difficulty: "Hard",
     },
   ];
 }

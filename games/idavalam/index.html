@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Idavalam | Tamil Spelling Game with Help Popup</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=TAM+Regular&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+  class="font-sans bg-center bg-no-repeat bg-fixed w-screen h-screen flex items-center justify-center"
+  style="background-image: url('game.png'); background-size: contain;">
+</body>
+
+
+    <!-- Splash Screen (Intro Image) -->
+    <div
+      id="splash-screen"
+      class="fixed inset-0 flex justify-center items-center bg-gradient-to-r from-blue-500 via-black to-red-500 z-20"
+    >
+      <img
+        src="intro-image.png"
+        alt="Game Intro"
+        class="max-w-full max-h-full object-contain cursor-pointer"
+        id="start-game"
+      />
+    </div>
+
+    <!-- Game Root (This will be visible after starting the game) -->
+    <div id="root" class="hidden">
+      <!-- Your game components here -->
+    </div>
+
+    <!-- Help Button -->
+    <button
+      id="help-button"
+      class="absolute top-4 left-4 w-12 h-12 bg-no-repeat bg-center bg-contain"
+      style="background-image: url('help-hover.gif')"
+    ></button>
+
+    <!-- Popup Overlay -->
+    <div
+      id="popup"
+      class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-30"
+    >
+      <!-- Popup Container -->
+      <div class="relative w-3/4 h-auto">
+        <!-- Popup Image -->
+        <img
+          src="help-popup.png"
+          alt="Help"
+          class="w-full h-auto max-w-full max-h-full"
+        />
+        <button
+          id="close-popup"
+          class="absolute top-2 left-2 bg-white text-black text-4xl font-bold w-14 h-14 rounded-full flex items-center justify-center shadow-lg border-4 border-white focus:outline-none"
+        >
+          ✖
+        </button>
+      </div>
+    </div>
+
+    <!-- React and Script -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel" src="script.js"></script>
+
+    <!-- Help Button and Popup Script -->
+    <script>
+      // JavaScript for Help Button and Popup
+      const helpButton = document.getElementById("help-button");
+      const popup = document.getElementById("popup");
+      const closeButton = document.getElementById("close-popup");
+
+      // Open the popup when the help button is clicked
+      helpButton.addEventListener("click", () => {
+        popup.classList.remove("hidden"); // Show the popup
+      });
+
+      // Close the popup when the close button is clicked
+      closeButton.addEventListener("click", () => {
+        popup.classList.add("hidden"); // Hide the popup
+      });
+
+      // Optional: Close the popup when clicking outside the image
+      popup.addEventListener("click", (e) => {
+        if (e.target === popup) {
+          popup.classList.add("hidden");
+        }
+      });
+
+      // JavaScript to start the game
+      const startGameButton = document.getElementById("start-game");
+      const splashScreen = document.getElementById("splash-screen");
+      const gameRoot = document.getElementById("root");
+
+      // Start game when intro image is clicked
+      startGameButton.addEventListener("click", () => {
+        splashScreen.classList.add("hidden"); // Hide splash screen
+        gameRoot.classList.remove("hidden"); // Show game content
+      });
+    </script>
+  </body>
+</html>
