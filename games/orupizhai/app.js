@@ -9,7 +9,6 @@ function App() {
   const [gameOver, setGameOver] = React.useState(false);
   const [isClickable, setIsClickable] = React.useState(true);
   const [isMuted, setIsMuted] = React.useState(false); // Mute state for background music only
-  const [loading, setLoading] = React.useState(true); // New state for loading assets and sentences
 
   const currentSentence = sentences[currentSentenceIndex];
 
@@ -17,94 +16,6 @@ function App() {
   const bgMusic = new Audio("sounds/bg.mp3");
   bgMusic.loop = true; // Loop the music
   bgMusic.volume = 0.2; // Adjust volume (optional)
-
-  const images = [
-    "images/intro-img.png",
-    "images/game-control.gif",
-    "images/helper.gif",
-    "images/helper.png",
-    "images/end.png",
-  ];
-
-  const sounds = [
-    "sounds/start.mp3",
-    "sounds/correct.mp3",
-    "sounds/wrong.mp3",
-    "sounds/cheers.mp3",
-  ];
-
-  // Function to preload all assets (images and sounds)
-  const preloadAssets = () => {
-    const promises = [];
-
-    images.forEach((src) => {
-      promises.push(
-        new Promise((resolve, reject) => {
-          const img = new Image();
-          img.src = src;
-          img.onload = resolve;
-          img.onerror = (err) => {
-            console.error("Failed to load image:", src, err);
-            reject(err);
-          };
-        })
-      );
-    });
-
-    sounds.forEach((src) => {
-      promises.push(
-        new Promise((resolve, reject) => {
-          const audio = new Audio(src);
-          audio.oncanplaythrough = resolve;
-          audio.onerror = (err) => {
-            console.error("Failed to load sound:", src, err);
-            reject(err);
-          };
-        })
-      );
-    });
-
-    return promises;
-  };
-
-  const preloadAllData = () => {
-    const assetPromises = preloadAssets();
-    const sentencePromise = new Promise((resolve) => {
-      if (sentences.length > 0) {
-        resolve();
-      } else {
-        // Wait for sentences to be loaded via postMessage
-        const handleMessage = (event) => {
-          console.log("Message received:", event.data); // Debug log
-          if (event.origin !== window.location.origin) {
-            console.warn("Invalid origin:", event.origin);
-            return;
-          }
-
-          const { type, data } = event.data;
-          if (type === "sentencesData") {
-            setSentences(data);
-            window.removeEventListener("message", handleMessage); // Remove the listener once data is received
-            resolve();
-          }
-        };
-        window.addEventListener("message", handleMessage);
-      }
-    });
-
-    Promise.all([...assetPromises, sentencePromise])
-      .then(() => {
-        setLoading(false); // Set loading to false when all assets and sentences are loaded
-      })
-      .catch((error) => {
-        console.error("Error loading data", error);
-        setLoading(false); // Set loading to false in case of an error
-      });
-  };
-
-  React.useEffect(() => {
-    preloadAllData(); // Start preloading assets and sentences when the component mounts
-  }, []);
 
   React.useEffect(() => {
     // Start background music when game starts
@@ -120,6 +31,22 @@ function App() {
       bgMusic.pause(); // Pause music when game ends or component unmounts
     };
   }, [currentSentenceIndex, gameOver, isMuted]);
+
+  React.useEffect(() => {
+    window.addEventListener("message", (event) => {
+      if (event.origin !== window.location.origin) {
+        console.warn("Invalid origin:", event.origin);
+        return;
+      }
+
+      const { type, data } = event.data;
+      if (type === "sentencesData") {
+        setSentences(data);
+      }
+    });
+
+    return () => window.removeEventListener("message", handleMessage);
+  }, []);
 
   React.useEffect(() => {
     let timerInterval;
@@ -221,14 +148,6 @@ function App() {
     // Toggle background music mute/unmute
     setIsMuted(!isMuted);
   };
-
-  if (loading) {
-    return (
-      <div className="loading-screen">
-        <p>Loading assets and sentences...</p>
-      </div>
-    );
-  }
 
   return (
     <div className="app">

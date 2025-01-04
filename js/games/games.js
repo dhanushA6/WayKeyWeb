@@ -21,7 +21,7 @@ function initGame() {
     <div id="gameButtons" style="text-align: center; margin-top: 10px;">
         <button id="switchMemoryGame" class="game-switch-btn">Memory Game</button>
         <button id="switchKuzhappi" class="game-switch-btn">Kuzhappi</button>
-        <button id="switchOrupizhai2" class="game-switch-btn">Orupizhai2</button>
+        <button id="switchOrupizhai2" class="game-switch-btn">Orupizhai</button>
         <button id="switchVerbGame" class="game-switch-btn">Mukkala</button>
         <button id="switchIdavalam" class="game-switch-btn">Idavalam</button>
     </div>`;
@@ -98,10 +98,16 @@ function getVerbsData() {
 function getTileDistributions() {
   return [
     {
-      tilesDistributionId: "TD008",
-      level: 1,
-      tilesDistribution: ["டூ", "பூ", "மூ", "யூ", "ழூ", "சூ", "கூ", "தூ"],
-      complexity: "Mid",
+      tilesDistributionId: "TD009",
+      level: 10,
+      tilesDistribution: ["லே", "ரே", "வே", "நே", "பே", "கே", "சே", "தே"],
+      complexity: "High",
+    },
+    {
+      tilesDistributionId: "TD010",
+      level: 9,
+      tilesDistribution: ["டி", "பி", "மி", "யி", "ழி", "சி", "கி", "தி"],
+      complexity: "Low",
     },
   ];
 }

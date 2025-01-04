@@ -1,11 +1,9 @@
-// script.js
-
 let tileDistributions = [];
-let currentLevel = 1;
+let currentDistributionIndex = 0; // Tracks the current tilesDistribution
 let firstTile, secondTile;
 let lockBoard = false;
 let matchedPairs = 0;
-let startTime; // Track time at the start of each level
+let startTime; // Track time at the start of the game
 
 // Listen for messages from the parent
 window.addEventListener("message", (event) => {
@@ -18,32 +16,30 @@ window.addEventListener("message", (event) => {
 
   if (type === "tileData") {
     tileDistributions = data;
-    setupGame(currentLevel);
+    setupGame();
   }
 });
 
-// Function to set up game with selected tiles
-function setupGame(level) {
+// Function to set up the game for the current tilesDistribution
+function setupGame() {
   if (!tileDistributions || tileDistributions.length === 0) {
-    console.error("tileDistributions data is not yet available.");
-    return; // Do not proceed if tileDistributions is not ready
-  }
-  console.log("tileDistributions data is available.");
-  console.log("Game Board Element:", document.getElementById("game-board"));
-
-  const selectedData = tileDistributions.find((data) => data.level === level);
-  if (!selectedData) {
-    console.error(`No data found for level ${level}`);
+    console.error("tileDistributions data is not available.");
     return;
   }
 
-  const tiles = selectedData.tilesDistribution.concat(
-    selectedData.tilesDistribution
+  if (currentDistributionIndex >= tileDistributions.length) {
+    endGame();
+    return;
+  }
+
+  const currentDistribution = tileDistributions[currentDistributionIndex];
+  const tiles = currentDistribution.tilesDistribution.concat(
+    currentDistribution.tilesDistribution
   ); // Duplicate for matching pairs
   tiles.sort(() => 0.5 - Math.random()); // Shuffle tiles
 
   const gameBoard = document.getElementById("game-board");
-  gameBoard.innerHTML = ""; // Clear board
+  gameBoard.innerHTML = ""; // Clear the board
   gameBoard.style.display = "grid"; // Show the game board
   gameBoard.style.opacity = "1"; // Fade in
 
@@ -52,7 +48,7 @@ function setupGame(level) {
   [firstTile, secondTile] = [null, null];
   lockBoard = false;
 
-  // Set start time for level
+  // Set start time for this tilesDistribution
   startTime = new Date().getTime();
 
   // Create and display tiles
@@ -98,32 +94,15 @@ function disableTiles() {
   secondTile.removeEventListener("click", handleTileClick);
 
   matchedPairs++;
-  const tilesInLevel = tileDistributions.find(
-    (data) => data.level === currentLevel
-  ).tilesDistribution.length;
 
-  if (matchedPairs === tilesInLevel) {
-    // Level completed
-    const endTime = new Date().getTime();
-    const timeTaken = Math.floor((endTime - startTime) / 1000); // in seconds
-    const points = 20; // Fixed points for single level
-
-    // Send the result data to the parent window
-    window.parent.postMessage(
-      {
-        type: "gameComplete",
-        data: {
-          level: currentLevel,
-          timeTaken: timeTaken,
-          points: points,
-        },
-      },
-      "*"
-    );
-
-    // Show completion message
-    showToast("Congratulations! You've completed the game.");
-    return; // End the game
+  // Check if all pairs are matched
+  const tilesInCurrentDistribution =
+    tileDistributions[currentDistributionIndex].tilesDistribution.length;
+  if (matchedPairs === tilesInCurrentDistribution) {
+    // Move to the next tilesDistribution
+    currentDistributionIndex++;
+    setupGame(); // Setup next distribution
+    return;
   }
 
   resetBoard();
@@ -140,6 +119,28 @@ function unflipTiles() {
 function resetBoard() {
   [firstTile, secondTile] = [null, null];
   lockBoard = false;
+}
+
+function endGame() {
+  const endTime = new Date().getTime();
+  const totalTimeTaken = Math.floor((endTime - startTime) / 1000); // in seconds
+
+  // Send the result data to the parent window
+  window.parent.postMessage(
+    {
+      type: "gameComplete",
+      data: {
+        timeTaken: totalTimeTaken,
+        points: 20 * tileDistributions.length, // Points for all completed distributions
+      },
+    },
+    "*"
+  );
+
+  // Show end message
+  showToast("Congratulations! You've completed all levels of the game.");
+  const gameBoard = document.getElementById("game-board");
+  gameBoard.style.display = "none"; // Hide game board
 }
 
 // Toast function to show messages
