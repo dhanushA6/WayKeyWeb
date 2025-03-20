@@ -1,0 +1,9 @@
+@media screen and (min-width: 1280px) {
+    .option101-option101 {
+      transform: scale(0.8);
+      transform-origin: top;
+      width: 125%;
+      height: 125vh;
+      
+    }
+  }

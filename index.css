@@ -1069,7 +1069,6 @@ html {
 @media (max-width: 1024px) {
   .option101-container {
     padding: 20px;
-    Adjust for smaller screens
   }
 
   #toolArea {
@@ -1181,4 +1180,14 @@ html {
   font-size: 18px;
   color: red;
   position: absolute;
+}
+
+@media screen and (min-width: 1280px) {
+  .option101-option101 {
+    transform: scale(0.8);
+    transform-origin: top;
+    width: 125%;
+    height: 125vh;
+    
+  }
 }
