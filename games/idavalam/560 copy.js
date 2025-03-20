@@ -1,1 +1,0 @@
-(self.webpackChunkkta_utchol=self.webpackChunkkta_utchol||[]).push([[560],{560:()=>{}}]);
