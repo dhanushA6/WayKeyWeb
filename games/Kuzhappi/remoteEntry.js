@@ -1,21 +1,21 @@
-var kta_kuzhappi;
+var kta_utchol;
 (() => {
   "use strict";
   var e,
     r,
     t,
+    o,
     n,
     a,
-    o,
     i,
     u,
     l,
-    d,
     s,
     f,
+    d,
     h,
-    p,
     c,
+    p,
     v,
     m,
     g,
@@ -23,23 +23,23 @@ var kta_kuzhappi;
     y,
     k,
     w,
-    P,
-    S = {
-      4945: (e, r, t) => {
-        var n = {
-            "./Kuzhappi": () =>
-              Promise.all([t.e(914), t.e(61), t.e(560)]).then(
-                () => () => t(1560)
+    S,
+    P = {
+      3646: (e, r, t) => {
+        var o = {
+            "./Mukka": () =>
+              Promise.all([t.e(423), t.e(914), t.e(58)]).then(
+                () => () => t(9e3)
               ),
             "./LandingPage": () =>
-              Promise.all([t.e(914), t.e(180), t.e(539)]).then(
-                () => () => t(9539)
+              Promise.all([t.e(914), t.e(180), t.e(329)]).then(
+                () => () => t(8329)
               ),
           },
-          a = (e, r) => (
+          n = (e, r) => (
             (t.R = r),
-            (r = t.o(n, e)
-              ? n[e]()
+            (r = t.o(o, e)
+              ? o[e]()
               : Promise.resolve().then(() => {
                   throw new Error(
                     'Module "' + e + '" does not exist in container.'
@@ -48,18 +48,18 @@ var kta_kuzhappi;
             (t.R = void 0),
             r
           ),
-          o = (e, r) => {
+          a = (e, r) => {
             if (t.S) {
-              var n = "default",
-                a = t.S[n];
-              if (a && a !== e)
+              var o = "default",
+                n = t.S[o];
+              if (n && n !== e)
                 throw new Error(
                   "Container initialization failed as it has already been initialized with a different share scope"
                 );
-              return (t.S[n] = e), t.I(n, r);
+              return (t.S[o] = e), t.I(o, r);
             }
           };
-        t.d(r, { get: () => a, init: () => o });
+        t.d(r, { get: () => n, init: () => a });
       },
     },
     j = {};
@@ -67,9 +67,9 @@ var kta_kuzhappi;
     var r = j[e];
     if (void 0 !== r) return r.exports;
     var t = (j[e] = { id: e, exports: {} });
-    return S[e](t, t.exports, O), t.exports;
+    return P[e](t, t.exports, O), t.exports;
   }
-  (O.m = S),
+  (O.m = P),
     (O.c = j),
     (O.n = (e) => {
       var r = e && e.__esModule ? () => e.default : () => e;
@@ -87,23 +87,23 @@ var kta_kuzhappi;
     (O.u = (e) => e + ".js"),
     (O.o = (e, r) => Object.prototype.hasOwnProperty.call(e, r)),
     (e = {}),
-    (r = "kta_kuzhappi:"),
-    (O.l = (t, n, a, o) => {
-      if (e[t]) e[t].push(n);
+    (r = "kta_utchol:"),
+    (O.l = (t, o, n, a) => {
+      if (e[t]) e[t].push(o);
       else {
         var i, u;
-        if (void 0 !== a)
+        if (void 0 !== n)
           for (
-            var l = document.getElementsByTagName("script"), d = 0;
-            d < l.length;
-            d++
+            var l = document.getElementsByTagName("script"), s = 0;
+            s < l.length;
+            s++
           ) {
-            var s = l[d];
+            var f = l[s];
             if (
-              s.getAttribute("src") == t ||
-              s.getAttribute("data-webpack") == r + a
+              f.getAttribute("src") == t ||
+              f.getAttribute("data-webpack") == r + n
             ) {
-              i = s;
+              i = f;
               break;
             }
           }
@@ -112,26 +112,26 @@ var kta_kuzhappi;
           ((i = document.createElement("script")).charset = "utf-8"),
           (i.timeout = 120),
           O.nc && i.setAttribute("nonce", O.nc),
-          i.setAttribute("data-webpack", r + a),
+          i.setAttribute("data-webpack", r + n),
           (i.src = t)),
-          (e[t] = [n]);
-        var f = (r, n) => {
+          (e[t] = [o]);
+        var d = (r, o) => {
             (i.onerror = i.onload = null), clearTimeout(h);
-            var a = e[t];
+            var n = e[t];
             if (
               (delete e[t],
               i.parentNode && i.parentNode.removeChild(i),
-              a && a.forEach((e) => e(n)),
+              n && n.forEach((e) => e(o)),
               r)
             )
-              return r(n);
+              return r(o);
           },
           h = setTimeout(
-            f.bind(null, void 0, { type: "timeout", target: i }),
+            d.bind(null, void 0, { type: "timeout", target: i }),
             12e4
           );
-        (i.onerror = f.bind(null, i.onerror)),
-          (i.onload = f.bind(null, i.onload)),
+        (i.onerror = d.bind(null, i.onerror)),
+          (i.onload = d.bind(null, i.onload)),
           u && document.head.appendChild(i);
       }
     }),
@@ -145,37 +145,29 @@ var kta_kuzhappi;
       O.S = {};
       var e = {},
         r = {};
-      O.I = (t, n) => {
-        n || (n = []);
-        var a = r[t];
-        if ((a || (a = r[t] = {}), !(n.indexOf(a) >= 0))) {
-          if ((n.push(a), e[t])) return e[t];
+      O.I = (t, o) => {
+        o || (o = []);
+        var n = r[t];
+        if ((n || (n = r[t] = {}), !(o.indexOf(n) >= 0))) {
+          if ((o.push(n), e[t])) return e[t];
           O.o(O.S, t) || (O.S[t] = {});
-          var o = O.S[t],
-            i = "kta_kuzhappi",
-            u = (e, r, t, n) => {
-              var a = (o[e] = o[e] || {}),
-                u = a[r];
-              (!u || (!u.loaded && (!n != !u.eager ? n : i > u.from))) &&
-                (a[r] = { get: t, from: i, eager: !!n });
+          var a = O.S[t],
+            i = "kta_utchol",
+            u = (e, r, t, o) => {
+              var n = (a[e] = a[e] || {}),
+                u = n[r];
+              (!u || (!u.loaded && (!o != !u.eager ? o : i > u.from))) &&
+                (n[r] = { get: t, from: i, eager: !!o });
             },
             l = [];
           return (
             "default" === t &&
               (u("axios", "1.7.9", () => O.e(447).then(() => () => O(4447))),
-              u("react-dnd-html5-backend", "16.0.1", () =>
-                O.e(631).then(() => () => O(3631))
-              ),
-              u("react-dnd", "16.0.1", () =>
-                Promise.all([O.e(648), O.e(914), O.e(848)]).then(
-                  () => () => O(9648)
-                )
-              ),
               u("react-dom", "18.3.1", () =>
                 Promise.all([O.e(961), O.e(914)]).then(() => () => O(961))
               ),
               u("react-router-dom", "6.28.2", () =>
-                Promise.all([O.e(267), O.e(914), O.e(676)]).then(
+                Promise.all([O.e(648), O.e(914), O.e(676)]).then(
                   () => () => O(2648)
                 )
               ),
@@ -189,28 +181,28 @@ var kta_kuzhappi;
     (t = (e) => {
       var r = (e) => e.split(".").map((e) => (+e == e ? +e : e)),
         t = /^([^-+]+)?(?:-([^+]+))?(?:\+(.+))?$/.exec(e),
-        n = t[1] ? r(t[1]) : [];
+        o = t[1] ? r(t[1]) : [];
       return (
-        t[2] && (n.length++, n.push.apply(n, r(t[2]))),
-        t[3] && (n.push([]), n.push.apply(n, r(t[3]))),
-        n
+        t[2] && (o.length++, o.push.apply(o, r(t[2]))),
+        t[3] && (o.push([]), o.push.apply(o, r(t[3]))),
+        o
       );
     }),
-    (n = (e, r) => {
+    (o = (e, r) => {
       (e = t(e)), (r = t(r));
-      for (var n = 0; ; ) {
-        if (n >= e.length) return n < r.length && "u" != (typeof r[n])[0];
-        var a = e[n],
-          o = (typeof a)[0];
-        if (n >= r.length) return "u" == o;
-        var i = r[n],
+      for (var o = 0; ; ) {
+        if (o >= e.length) return o < r.length && "u" != (typeof r[o])[0];
+        var n = e[o],
+          a = (typeof n)[0];
+        if (o >= r.length) return "u" == a;
+        var i = r[o],
           u = (typeof i)[0];
-        if (o != u) return ("o" == o && "n" == u) || "s" == u || "u" == o;
-        if ("o" != o && "u" != o && a != i) return a < i;
-        n++;
+        if (a != u) return ("o" == a && "n" == u) || "s" == u || "u" == a;
+        if ("o" != a && "u" != a && n != i) return n < i;
+        o++;
       }
     }),
-    (a = (e) => {
+    (n = (e) => {
       var r = e[0],
         t = "";
       if (1 === e.length) return "*";
@@ -227,17 +219,17 @@ var kta_kuzhappi;
             : r > 0
             ? "="
             : "!=";
-        for (var n = 1, o = 1; o < e.length; o++)
-          n--,
+        for (var o = 1, a = 1; a < e.length; a++)
+          o--,
             (t +=
-              "u" == (typeof (u = e[o]))[0]
+              "u" == (typeof (u = e[a]))[0]
                 ? "-"
-                : (n > 0 ? "." : "") + ((n = 2), u));
+                : (o > 0 ? "." : "") + ((o = 2), u));
         return t;
       }
       var i = [];
-      for (o = 1; o < e.length; o++) {
-        var u = e[o];
+      for (a = 1; a < e.length; a++) {
+        var u = e[a];
         i.push(
           0 === u
             ? "not(" + l() + ")"
@@ -245,7 +237,7 @@ var kta_kuzhappi;
             ? "(" + l() + " || " + l() + ")"
             : 2 === u
             ? i.pop() + " " + i.pop()
-            : a(u)
+            : n(u)
         );
       }
       return l();
@@ -253,67 +245,67 @@ var kta_kuzhappi;
         return i.pop().replace(/^\((.+)\)$/, "$1");
       }
     }),
-    (o = (e, r) => {
+    (a = (e, r) => {
       if (0 in e) {
         r = t(r);
-        var n = e[0],
-          a = n < 0;
-        a && (n = -n - 1);
+        var o = e[0],
+          n = o < 0;
+        n && (o = -o - 1);
         for (var i = 0, u = 1, l = !0; ; u++, i++) {
-          var d,
-            s,
-            f = u < e.length ? (typeof e[u])[0] : "";
-          if (i >= r.length || "o" == (s = (typeof (d = r[i]))[0]))
-            return !l || ("u" == f ? u > n && !a : ("" == f) != a);
-          if ("u" == s) {
-            if (!l || "u" != f) return !1;
+          var s,
+            f,
+            d = u < e.length ? (typeof e[u])[0] : "";
+          if (i >= r.length || "o" == (f = (typeof (s = r[i]))[0]))
+            return !l || ("u" == d ? u > o && !n : ("" == d) != n);
+          if ("u" == f) {
+            if (!l || "u" != d) return !1;
           } else if (l)
-            if (f == s)
-              if (u <= n) {
-                if (d != e[u]) return !1;
+            if (d == f)
+              if (u <= o) {
+                if (s != e[u]) return !1;
               } else {
-                if (a ? d > e[u] : d < e[u]) return !1;
-                d != e[u] && (l = !1);
+                if (n ? s > e[u] : s < e[u]) return !1;
+                s != e[u] && (l = !1);
               }
-            else if ("s" != f && "n" != f) {
-              if (a || u <= n) return !1;
+            else if ("s" != d && "n" != d) {
+              if (n || u <= o) return !1;
               (l = !1), u--;
             } else {
-              if (u <= n || s < f != a) return !1;
+              if (u <= o || f < d != n) return !1;
               l = !1;
             }
-          else "s" != f && "n" != f && ((l = !1), u--);
+          else "s" != d && "n" != d && ((l = !1), u--);
         }
       }
       var h = [],
-        p = h.pop.bind(h);
+        c = h.pop.bind(h);
       for (i = 1; i < e.length; i++) {
-        var c = e[i];
-        h.push(1 == c ? p() | p() : 2 == c ? p() & p() : c ? o(c, r) : !p());
+        var p = e[i];
+        h.push(1 == p ? c() | c() : 2 == p ? c() & c() : p ? a(p, r) : !c());
       }
-      return !!p();
+      return !!c();
     }),
     (i = (e, r) => e && O.o(e, r)),
     (u = (e) => ((e.loaded = 1), e.get())),
     (l = (e) =>
       Object.keys(e).reduce((r, t) => (e[t].eager && (r[t] = e[t]), r), {})),
-    (d = (e, r, t, a) => {
-      var i = a ? l(e[r]) : e[r];
+    (s = (e, r, t, n) => {
+      var i = n ? l(e[r]) : e[r];
       return (
         (r = Object.keys(i).reduce(
-          (e, r) => (!o(t, r) || (e && !n(e, r)) ? e : r),
+          (e, r) => (!a(t, r) || (e && !o(e, r)) ? e : r),
           0
         )) && i[r]
       );
     }),
-    (s = (e, r, t) => {
-      var a = t ? l(e[r]) : e[r];
-      return Object.keys(a).reduce(
-        (e, r) => (!e || (!a[e].loaded && n(e, r)) ? r : e),
+    (f = (e, r, t) => {
+      var n = t ? l(e[r]) : e[r];
+      return Object.keys(n).reduce(
+        (e, r) => (!e || (!n[e].loaded && o(e, r)) ? r : e),
         0
       );
     }),
-    (f = (e, r, t, n) =>
+    (d = (e, r, t, o) =>
       "Unsatisfied version " +
       t +
       " from " +
@@ -321,15 +313,15 @@ var kta_kuzhappi;
       " of shared singleton module " +
       r +
       " (required " +
-      a(n) +
+      n(o) +
       ")"),
-    (h = (e, r, t, n, o) => {
+    (h = (e, r, t, o, a) => {
       var i = e[t];
       return (
         "No satisfying version (" +
-        a(n) +
+        n(o) +
         ")" +
-        (o ? " for eager consumption" : "") +
+        (a ? " for eager consumption" : "") +
         " of shared module " +
         t +
         " found in shared scope " +
@@ -340,35 +332,35 @@ var kta_kuzhappi;
           .join(", ")
       );
     }),
-    (p = (e) => {
+    (c = (e) => {
       throw new Error(e);
     }),
-    (c = (e) => {
+    (p = (e) => {
       "undefined" != typeof console && console.warn && console.warn(e);
     }),
     (m = (e, r, t) =>
       t
         ? t()
         : ((e, r) =>
-            p("Shared module " + r + " doesn't exist in shared scope " + e))(
+            c("Shared module " + r + " doesn't exist in shared scope " + e))(
             e,
             r
           )),
     (g = (v = (e) =>
-      function (r, t, n, a, o) {
+      function (r, t, o, n, a) {
         var i = O.I(r);
-        return i && i.then && !n
-          ? i.then(e.bind(e, r, O.S[r], t, !1, a, o))
-          : e(r, O.S[r], t, n, a, o);
-      })((e, r, t, n, a, o) => {
-      if (!i(r, t)) return m(e, t, o);
-      var l = d(r, t, a, n);
-      return l ? u(l) : o ? o() : void p(h(r, e, t, a, n));
+        return i && i.then && !o
+          ? i.then(e.bind(e, r, O.S[r], t, !1, n, a))
+          : e(r, O.S[r], t, o, n, a);
+      })((e, r, t, o, n, a) => {
+      if (!i(r, t)) return m(e, t, a);
+      var l = s(r, t, n, o);
+      return l ? u(l) : a ? a() : void c(h(r, e, t, n, o));
     })),
-    (b = v((e, r, t, n, a, l) => {
+    (b = v((e, r, t, o, n, l) => {
       if (!i(r, t)) return m(e, t, l);
-      var d = s(r, t, n);
-      return o(a, d) || c(f(r, t, d, a)), u(r[t][d]);
+      var s = f(r, t, o);
+      return a(n, s) || p(d(r, t, s, n)), u(r[t][s]);
     })),
     (y = {}),
     (k = {
@@ -380,73 +372,65 @@ var kta_kuzhappi;
         b("default", "react-dom", !1, [1, 18, 3, 1], () =>
           O.e(961).then(() => () => O(961))
         ),
-      1330: () =>
-        g("default", "react-dnd-html5-backend", !1, [1, 16, 0, 1], () =>
-          O.e(631).then(() => () => O(3631))
-        ),
-      5082: () =>
-        g("default", "react-dnd", !1, [1, 16, 0, 1], () =>
-          O.e(648).then(() => () => O(9648))
-        ),
       9180: () =>
         g("default", "react-router-dom", !1, [1, 6, 28, 2], () =>
-          Promise.all([O.e(267), O.e(676)]).then(() => () => O(2648))
+          Promise.all([O.e(648), O.e(676)]).then(() => () => O(2648))
         ),
     }),
-    (w = { 61: [1330, 5082], 180: [9180], 676: [676], 914: [4914] }),
-    (P = {}),
+    (w = { 180: [9180], 676: [676], 914: [4914] }),
+    (S = {}),
     (O.f.consumes = (e, r) => {
       O.o(w, e) &&
         w[e].forEach((e) => {
           if (O.o(y, e)) return r.push(y[e]);
-          if (!P[e]) {
+          if (!S[e]) {
             var t = (r) => {
               (y[e] = 0),
                 (O.m[e] = (t) => {
                   delete O.c[e], (t.exports = r());
                 });
             };
-            P[e] = !0;
-            var n = (r) => {
+            S[e] = !0;
+            var o = (r) => {
               delete y[e],
                 (O.m[e] = (t) => {
                   throw (delete O.c[e], r);
                 });
             };
             try {
-              var a = k[e]();
-              a.then ? r.push((y[e] = a.then(t).catch(n))) : t(a);
+              var n = k[e]();
+              n.then ? r.push((y[e] = n.then(t).catch(o))) : t(n);
             } catch (e) {
-              n(e);
+              o(e);
             }
           }
         });
     }),
     (() => {
       O.b = document.baseURI || self.location.href;
-      var e = { 970: 0 };
+      var e = { 161: 0 };
       O.f.j = (r, t) => {
-        var n = O.o(e, r) ? e[r] : void 0;
-        if (0 !== n)
-          if (n) t.push(n[2]);
-          else if (/^(180|61|676|914)$/.test(r)) e[r] = 0;
+        var o = O.o(e, r) ? e[r] : void 0;
+        if (0 !== o)
+          if (o) t.push(o[2]);
+          else if (/^(180|676|914)$/.test(r)) e[r] = 0;
           else {
-            var a = new Promise((t, a) => (n = e[r] = [t, a]));
-            t.push((n[2] = a));
-            var o = O.p + O.u(r),
+            var n = new Promise((t, n) => (o = e[r] = [t, n]));
+            t.push((o[2] = n));
+            var a = O.p + O.u(r),
               i = new Error();
             O.l(
-              o,
+              a,
               (t) => {
-                if (O.o(e, r) && (0 !== (n = e[r]) && (e[r] = void 0), n)) {
-                  var a = t && ("load" === t.type ? "missing" : t.type),
-                    o = t && t.target && t.target.src;
+                if (O.o(e, r) && (0 !== (o = e[r]) && (e[r] = void 0), o)) {
+                  var n = t && ("load" === t.type ? "missing" : t.type),
+                    a = t && t.target && t.target.src;
                   (i.message =
-                    "Loading chunk " + r + " failed.\n(" + a + ": " + o + ")"),
+                    "Loading chunk " + r + " failed.\n(" + n + ": " + a + ")"),
                     (i.name = "ChunkLoadError"),
-                    (i.type = a),
-                    (i.request = o),
-                    n[1](i);
+                    (i.type = n),
+                    (i.request = a),
+                    o[1](i);
                 }
               },
               "chunk-" + r,
@@ -455,22 +439,21 @@ var kta_kuzhappi;
           }
       };
       var r = (r, t) => {
-          var n,
-            a,
-            [o, i, u] = t,
+          var o,
+            n,
+            [a, i, u] = t,
             l = 0;
-          if (o.some((r) => 0 !== e[r])) {
-            for (n in i) O.o(i, n) && (O.m[n] = i[n]);
+          if (a.some((r) => 0 !== e[r])) {
+            for (o in i) O.o(i, o) && (O.m[o] = i[o]);
             u && u(O);
           }
-          for (r && r(t); l < o.length; l++)
-            (a = o[l]), O.o(e, a) && e[a] && e[a][0](), (e[a] = 0);
+          for (r && r(t); l < a.length; l++)
+            (n = a[l]), O.o(e, n) && e[n] && e[n][0](), (e[n] = 0);
         },
-        t = (self.webpackChunkkta_kuzhappi =
-          self.webpackChunkkta_kuzhappi || []);
+        t = (self.webpackChunkkta_utchol = self.webpackChunkkta_utchol || []);
       t.forEach(r.bind(null, 0)), (t.push = r.bind(null, t.push.bind(t)));
     })(),
     (O.nc = void 0);
-  var x = O(4945);
-  kta_kuzhappi = x;
+  var x = O(3646);
+  kta_utchol = x;
 })();
