@@ -1,4 +1,4 @@
-var kta_engoo;
+var kta_chorporul_ui;
 (() => {
   "use strict";
   var e,
@@ -14,8 +14,8 @@ var kta_engoo;
     f,
     d,
     h,
-    c,
     p,
+    c,
     v,
     m,
     g,
@@ -25,11 +25,11 @@ var kta_engoo;
     w,
     S,
     P = {
-      3646: (e, r, t) => {
+      888: (e, r, t) => {
         var o = {
-            "./Mukka": () =>
-              Promise.all([t.e(914), t.e(292), t.e(560)]).then(
-                () => () => t(1560)
+            "./Chorporul": () =>
+              Promise.all([t.e(753), t.e(914), t.e(817)]).then(
+                () => () => t(817)
               ),
             "./LandingPage": () =>
               Promise.all([t.e(914), t.e(180), t.e(539)]).then(
@@ -63,32 +63,32 @@ var kta_engoo;
       },
     },
     j = {};
-  function O(e) {
+  function _(e) {
     var r = j[e];
     if (void 0 !== r) return r.exports;
     var t = (j[e] = { id: e, exports: {} });
-    return P[e](t, t.exports, O), t.exports;
+    return P[e](t, t.exports, _), t.exports;
   }
-  (O.m = P),
-    (O.c = j),
-    (O.n = (e) => {
+  (_.m = P),
+    (_.c = j),
+    (_.n = (e) => {
       var r = e && e.__esModule ? () => e.default : () => e;
-      return O.d(r, { a: r }), r;
+      return _.d(r, { a: r }), r;
     }),
-    (O.d = (e, r) => {
+    (_.d = (e, r) => {
       for (var t in r)
-        O.o(r, t) &&
-          !O.o(e, t) &&
+        _.o(r, t) &&
+          !_.o(e, t) &&
           Object.defineProperty(e, t, { enumerable: !0, get: r[t] });
     }),
-    (O.f = {}),
-    (O.e = (e) =>
-      Promise.all(Object.keys(O.f).reduce((r, t) => (O.f[t](e, r), r), []))),
-    (O.u = (e) => e + ".js"),
-    (O.o = (e, r) => Object.prototype.hasOwnProperty.call(e, r)),
+    (_.f = {}),
+    (_.e = (e) =>
+      Promise.all(Object.keys(_.f).reduce((r, t) => (_.f[t](e, r), r), []))),
+    (_.u = (e) => e + ".js"),
+    (_.o = (e, r) => Object.prototype.hasOwnProperty.call(e, r)),
     (e = {}),
-    (r = "kta_engoo:"),
-    (O.l = (t, o, n, a) => {
+    (r = "kta-chorporul-ui:"),
+    (_.l = (t, o, n, a) => {
       if (e[t]) e[t].push(o);
       else {
         var i, u;
@@ -111,7 +111,7 @@ var kta_engoo;
           ((u = !0),
           ((i = document.createElement("script")).charset = "utf-8"),
           (i.timeout = 120),
-          O.nc && i.setAttribute("nonce", O.nc),
+          _.nc && i.setAttribute("nonce", _.nc),
           i.setAttribute("data-webpack", r + n),
           (i.src = t)),
           (e[t] = [o]);
@@ -135,24 +135,24 @@ var kta_engoo;
           u && document.head.appendChild(i);
       }
     }),
-    (O.r = (e) => {
+    (_.r = (e) => {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
     (() => {
-      O.S = {};
+      _.S = {};
       var e = {},
         r = {};
-      O.I = (t, o) => {
+      _.I = (t, o) => {
         o || (o = []);
         var n = r[t];
         if ((n || (n = r[t] = {}), !(o.indexOf(n) >= 0))) {
           if ((o.push(n), e[t])) return e[t];
-          O.o(O.S, t) || (O.S[t] = {});
-          var a = O.S[t],
-            i = "kta_engoo",
+          _.o(_.S, t) || (_.S[t] = {});
+          var a = _.S[t],
+            i = "kta-chorporul-ui",
             u = (e, r, t, o) => {
               var n = (a[e] = a[e] || {}),
                 u = n[r];
@@ -162,21 +162,22 @@ var kta_engoo;
             l = [];
           return (
             "default" === t &&
-              (u("react-dom", "18.3.1", () =>
-                Promise.all([O.e(961), O.e(914)]).then(() => () => O(961))
+              (u("axios", "1.8.2", () => _.e(447).then(() => () => _(4447))),
+              u("react-dom", "18.3.1", () =>
+                Promise.all([_.e(961), _.e(914)]).then(() => () => _(961))
               ),
-              u("react-router-dom", "6.28.2", () =>
-                Promise.all([O.e(648), O.e(914), O.e(676)]).then(
-                  () => () => O(2648)
+              u("react-router-dom", "6.30.0", () =>
+                Promise.all([_.e(648), _.e(914), _.e(676)]).then(
+                  () => () => _(2648)
                 )
               ),
-              u("react", "18.3.1", () => O.e(540).then(() => () => O(6540)))),
+              u("react", "18.3.1", () => _.e(540).then(() => () => _(6540)))),
             (e[t] = l.length ? Promise.all(l).then(() => (e[t] = 1)) : 1)
           );
         }
       };
     })(),
-    (O.p = ""),
+    (_.p = ""),
     (t = (e) => {
       var r = (e) => e.split(".").map((e) => (+e == e ? +e : e)),
         t = /^([^-+]+)?(?:-([^+]+))?(?:\+(.+))?$/.exec(e),
@@ -277,14 +278,14 @@ var kta_engoo;
         }
       }
       var h = [],
-        c = h.pop.bind(h);
+        p = h.pop.bind(h);
       for (i = 1; i < e.length; i++) {
-        var p = e[i];
-        h.push(1 == p ? c() | c() : 2 == p ? c() & c() : p ? a(p, r) : !c());
+        var c = e[i];
+        h.push(1 == c ? p() | p() : 2 == c ? p() & p() : c ? a(c, r) : !p());
       }
-      return !!c();
+      return !!p();
     }),
-    (i = (e, r) => e && O.o(e, r)),
+    (i = (e, r) => e && _.o(e, r)),
     (u = (e) => ((e.loaded = 1), e.get())),
     (l = (e) =>
       Object.keys(e).reduce((r, t) => (e[t].eager && (r[t] = e[t]), r), {})),
@@ -331,69 +332,73 @@ var kta_engoo;
           .join(", ")
       );
     }),
-    (c = (e) => {
+    (p = (e) => {
       throw new Error(e);
     }),
-    (p = (e) => {
+    (c = (e) => {
       "undefined" != typeof console && console.warn && console.warn(e);
     }),
     (m = (e, r, t) =>
       t
         ? t()
         : ((e, r) =>
-            c("Shared module " + r + " doesn't exist in shared scope " + e))(
+            p("Shared module " + r + " doesn't exist in shared scope " + e))(
             e,
             r
           )),
     (g = (v = (e) =>
       function (r, t, o, n, a) {
-        var i = O.I(r);
+        var i = _.I(r);
         return i && i.then && !o
-          ? i.then(e.bind(e, r, O.S[r], t, !1, n, a))
-          : e(r, O.S[r], t, o, n, a);
+          ? i.then(e.bind(e, r, _.S[r], t, !1, n, a))
+          : e(r, _.S[r], t, o, n, a);
       })((e, r, t, o, n, a) => {
       if (!i(r, t)) return m(e, t, a);
       var l = s(r, t, n, o);
-      return l ? u(l) : a ? a() : void c(h(r, e, t, n, o));
+      return l ? u(l) : a ? a() : void p(h(r, e, t, n, o));
     })),
     (b = v((e, r, t, o, n, l) => {
       if (!i(r, t)) return m(e, t, l);
       var s = f(r, t, o);
-      return a(n, s) || p(d(r, t, s, n)), u(r[t][s]);
+      return a(n, s) || c(d(r, t, s, n)), u(r[t][s]);
     })),
     (y = {}),
     (k = {
       4914: () =>
         b("default", "react", !1, [1, 18, 2, 0], () =>
-          O.e(540).then(() => () => O(6540))
+          _.e(540).then(() => () => _(6540))
         ),
       676: () =>
         b("default", "react-dom", !1, [1, 18, 3, 1], () =>
-          O.e(961).then(() => () => O(961))
+          _.e(961).then(() => () => _(961))
+        ),
+      8606: () =>
+        g("default", "axios", !1, [1, 1, 7, 9], () =>
+          _.e(447).then(() => () => _(4447))
         ),
       9180: () =>
         g("default", "react-router-dom", !1, [1, 6, 28, 2], () =>
-          Promise.all([O.e(648), O.e(676)]).then(() => () => O(2648))
+          Promise.all([_.e(648), _.e(676)]).then(() => () => _(2648))
         ),
     }),
-    (w = { 180: [9180], 676: [676], 914: [4914] }),
+    (w = { 180: [9180], 676: [676], 817: [8606], 914: [4914] }),
     (S = {}),
-    (O.f.consumes = (e, r) => {
-      O.o(w, e) &&
+    (_.f.consumes = (e, r) => {
+      _.o(w, e) &&
         w[e].forEach((e) => {
-          if (O.o(y, e)) return r.push(y[e]);
+          if (_.o(y, e)) return r.push(y[e]);
           if (!S[e]) {
             var t = (r) => {
               (y[e] = 0),
-                (O.m[e] = (t) => {
-                  delete O.c[e], (t.exports = r());
+                (_.m[e] = (t) => {
+                  delete _.c[e], (t.exports = r());
                 });
             };
             S[e] = !0;
             var o = (r) => {
               delete y[e],
-                (O.m[e] = (t) => {
-                  throw (delete O.c[e], r);
+                (_.m[e] = (t) => {
+                  throw (delete _.c[e], r);
                 });
             };
             try {
@@ -406,22 +411,22 @@ var kta_engoo;
         });
     }),
     (() => {
-      O.b = document.baseURI || self.location.href;
-      var e = { 240: 0 };
-      O.f.j = (r, t) => {
-        var o = O.o(e, r) ? e[r] : void 0;
+      _.b = document.baseURI || self.location.href;
+      var e = { 53: 0 };
+      _.f.j = (r, t) => {
+        var o = _.o(e, r) ? e[r] : void 0;
         if (0 !== o)
           if (o) t.push(o[2]);
           else if (/^(180|676|914)$/.test(r)) e[r] = 0;
           else {
             var n = new Promise((t, n) => (o = e[r] = [t, n]));
             t.push((o[2] = n));
-            var a = O.p + O.u(r),
+            var a = _.p + _.u(r),
               i = new Error();
-            O.l(
+            _.l(
               a,
               (t) => {
-                if (O.o(e, r) && (0 !== (o = e[r]) && (e[r] = void 0), o)) {
+                if (_.o(e, r) && (0 !== (o = e[r]) && (e[r] = void 0), o)) {
                   var n = t && ("load" === t.type ? "missing" : t.type),
                     a = t && t.target && t.target.src;
                   (i.message =
@@ -443,16 +448,17 @@ var kta_engoo;
             [a, i, u] = t,
             l = 0;
           if (a.some((r) => 0 !== e[r])) {
-            for (o in i) O.o(i, o) && (O.m[o] = i[o]);
-            u && u(O);
+            for (o in i) _.o(i, o) && (_.m[o] = i[o]);
+            u && u(_);
           }
           for (r && r(t); l < a.length; l++)
-            (n = a[l]), O.o(e, n) && e[n] && e[n][0](), (e[n] = 0);
+            (n = a[l]), _.o(e, n) && e[n] && e[n][0](), (e[n] = 0);
         },
-        t = (self.webpackChunkkta_engoo = self.webpackChunkkta_engoo || []);
+        t = (self.webpackChunkkta_chorporul_ui =
+          self.webpackChunkkta_chorporul_ui || []);
       t.forEach(r.bind(null, 0)), (t.push = r.bind(null, t.push.bind(t)));
     })(),
-    (O.nc = void 0);
-  var E = O(3646);
-  kta_engoo = E;
+    (_.nc = void 0);
+  var x = _(888);
+  kta_chorporul_ui = x;
 })();
