@@ -8,14 +8,14 @@
     u,
     i,
     l,
-    s,
     f,
+    s,
     d,
-    p,
     c,
+    p,
     h,
-    m,
     v,
+    m,
     g,
     b,
     y,
@@ -23,54 +23,54 @@
     j,
     w,
     S = {
-      4497: (e, r, t) => {
-        Promise.all([t.e(782), t.e(914), t.e(676), t.e(180), t.e(866)]).then(
-          t.bind(t, 3980)
+      497: (e, r, t) => {
+        Promise.all([t.e(585), t.e(914), t.e(672), t.e(665), t.e(158)]).then(
+          t.bind(t, 158)
         );
       },
     },
-    _ = {};
-  function O(e) {
-    var r = _[e];
+    O = {};
+  function P(e) {
+    var r = O[e];
     if (void 0 !== r) return r.exports;
-    var t = (_[e] = { id: e, exports: {} });
-    return S[e](t, t.exports, O), t.exports;
+    var t = (O[e] = { id: e, exports: {} });
+    return S[e](t, t.exports, P), t.exports;
   }
-  (O.m = S),
-    (O.c = _),
-    (O.n = (e) => {
+  (P.m = S),
+    (P.c = O),
+    (P.n = (e) => {
       var r = e && e.__esModule ? () => e.default : () => e;
-      return O.d(r, { a: r }), r;
+      return P.d(r, { a: r }), r;
     }),
-    (O.d = (e, r) => {
+    (P.d = (e, r) => {
       for (var t in r)
-        O.o(r, t) &&
-          !O.o(e, t) &&
+        P.o(r, t) &&
+          !P.o(e, t) &&
           Object.defineProperty(e, t, { enumerable: !0, get: r[t] });
     }),
-    (O.f = {}),
-    (O.e = (e) =>
-      Promise.all(Object.keys(O.f).reduce((r, t) => (O.f[t](e, r), r), []))),
-    (O.u = (e) => e + ".js"),
-    (O.o = (e, r) => Object.prototype.hasOwnProperty.call(e, r)),
+    (P.f = {}),
+    (P.e = (e) =>
+      Promise.all(Object.keys(P.f).reduce((r, t) => (P.f[t](e, r), r), []))),
+    (P.u = (e) => e + ".js"),
+    (P.o = (e, r) => Object.prototype.hasOwnProperty.call(e, r)),
     (e = {}),
-    (r = "kta_memory_game:"),
-    (O.l = (t, o, n, a) => {
+    (r = "kta_utchol:"),
+    (P.l = (t, o, n, a) => {
       if (e[t]) e[t].push(o);
       else {
         var u, i;
         if (void 0 !== n)
           for (
-            var l = document.getElementsByTagName("script"), s = 0;
-            s < l.length;
-            s++
+            var l = document.getElementsByTagName("script"), f = 0;
+            f < l.length;
+            f++
           ) {
-            var f = l[s];
+            var s = l[f];
             if (
-              f.getAttribute("src") == t ||
-              f.getAttribute("data-webpack") == r + n
+              s.getAttribute("src") == t ||
+              s.getAttribute("data-webpack") == r + n
             ) {
-              u = f;
+              u = s;
               break;
             }
           }
@@ -78,12 +78,12 @@
           ((i = !0),
           ((u = document.createElement("script")).charset = "utf-8"),
           (u.timeout = 120),
-          O.nc && u.setAttribute("nonce", O.nc),
+          P.nc && u.setAttribute("nonce", P.nc),
           u.setAttribute("data-webpack", r + n),
           (u.src = t)),
           (e[t] = [o]);
         var d = (r, o) => {
-            (u.onerror = u.onload = null), clearTimeout(p);
+            (u.onerror = u.onload = null), clearTimeout(c);
             var n = e[t];
             if (
               (delete e[t],
@@ -93,7 +93,7 @@
             )
               return r(o);
           },
-          p = setTimeout(
+          c = setTimeout(
             d.bind(null, void 0, { type: "timeout", target: u }),
             12e4
           );
@@ -102,24 +102,24 @@
           i && document.head.appendChild(u);
       }
     }),
-    (O.r = (e) => {
+    (P.r = (e) => {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
     (() => {
-      O.S = {};
+      P.S = {};
       var e = {},
         r = {};
-      O.I = (t, o) => {
+      P.I = (t, o) => {
         o || (o = []);
         var n = r[t];
         if ((n || (n = r[t] = {}), !(o.indexOf(n) >= 0))) {
           if ((o.push(n), e[t])) return e[t];
-          O.o(O.S, t) || (O.S[t] = {});
-          var a = O.S[t],
-            u = "kta_memory_game",
+          P.o(P.S, t) || (P.S[t] = {});
+          var a = P.S[t],
+            u = "kta_utchol",
             i = (e, r, t, o) => {
               var n = (a[e] = a[e] || {}),
                 i = n[r];
@@ -129,22 +129,21 @@
             l = [];
           return (
             "default" === t &&
-              (i("axios", "1.7.9", () => O.e(447).then(() => () => O(4447))),
-              i("react-dom", "18.3.1", () =>
-                Promise.all([O.e(961), O.e(914)]).then(() => () => O(961))
+              (i("react-dom", "18.3.1", () =>
+                Promise.all([P.e(961), P.e(914)]).then(() => () => P(961))
               ),
-              i("react-router-dom", "6.28.2", () =>
-                Promise.all([O.e(648), O.e(914), O.e(676)]).then(
-                  () => () => O(2648)
+              i("react-router-dom", "6.30.1", () =>
+                Promise.all([P.e(648), P.e(914), P.e(672)]).then(
+                  () => () => P(648)
                 )
               ),
-              i("react", "18.3.1", () => O.e(540).then(() => () => O(6540)))),
+              i("react", "18.3.1", () => P.e(540).then(() => () => P(159)))),
             (e[t] = l.length ? Promise.all(l).then(() => (e[t] = 1)) : 1)
           );
         }
       };
     })(),
-    (O.p = ""),
+    (P.p = ""),
     (t = (e) => {
       var r = (e) => e.split(".").map((e) => (+e == e ? +e : e)),
         t = /^([^-+]+)?(?:-([^+]+))?(?:\+(.+))?$/.exec(e),
@@ -219,44 +218,44 @@
           n = o < 0;
         n && (o = -o - 1);
         for (var u = 0, i = 1, l = !0; ; i++, u++) {
-          var s,
-            f,
+          var f,
+            s,
             d = i < e.length ? (typeof e[i])[0] : "";
-          if (u >= r.length || "o" == (f = (typeof (s = r[u]))[0]))
+          if (u >= r.length || "o" == (s = (typeof (f = r[u]))[0]))
             return !l || ("u" == d ? i > o && !n : ("" == d) != n);
-          if ("u" == f) {
+          if ("u" == s) {
             if (!l || "u" != d) return !1;
           } else if (l)
-            if (d == f)
+            if (d == s)
               if (i <= o) {
-                if (s != e[i]) return !1;
+                if (f != e[i]) return !1;
               } else {
-                if (n ? s > e[i] : s < e[i]) return !1;
-                s != e[i] && (l = !1);
+                if (n ? f > e[i] : f < e[i]) return !1;
+                f != e[i] && (l = !1);
               }
             else if ("s" != d && "n" != d) {
               if (n || i <= o) return !1;
               (l = !1), i--;
             } else {
-              if (i <= o || f < d != n) return !1;
+              if (i <= o || s < d != n) return !1;
               l = !1;
             }
           else "s" != d && "n" != d && ((l = !1), i--);
         }
       }
-      var p = [],
-        c = p.pop.bind(p);
+      var c = [],
+        p = c.pop.bind(c);
       for (u = 1; u < e.length; u++) {
         var h = e[u];
-        p.push(1 == h ? c() | c() : 2 == h ? c() & c() : h ? a(h, r) : !c());
+        c.push(1 == h ? p() | p() : 2 == h ? p() & p() : h ? a(h, r) : !p());
       }
-      return !!c();
+      return !!p();
     }),
-    (u = (e, r) => e && O.o(e, r)),
+    (u = (e, r) => e && P.o(e, r)),
     (i = (e) => ((e.loaded = 1), e.get())),
     (l = (e) =>
       Object.keys(e).reduce((r, t) => (e[t].eager && (r[t] = e[t]), r), {})),
-    (s = (e, r, t, n) => {
+    (f = (e, r, t, n) => {
       var u = n ? l(e[r]) : e[r];
       return (
         (r = Object.keys(u).reduce(
@@ -265,7 +264,7 @@
         )) && u[r]
       );
     }),
-    (f = (e, r, t) => {
+    (s = (e, r, t) => {
       var n = t ? l(e[r]) : e[r];
       return Object.keys(n).reduce(
         (e, r) => (!e || (!n[e].loaded && o(e, r)) ? r : e),
@@ -282,7 +281,7 @@
       " (required " +
       n(o) +
       ")"),
-    (p = (e, r, t, o, a) => {
+    (c = (e, r, t, o, a) => {
       var u = e[t];
       return (
         "No satisfying version (" +
@@ -299,73 +298,69 @@
           .join(", ")
       );
     }),
-    (c = (e) => {
+    (p = (e) => {
       throw new Error(e);
     }),
     (h = (e) => {
       "undefined" != typeof console && console.warn && console.warn(e);
     }),
-    (v = (e, r, t) =>
+    (m = (e, r, t) =>
       t
         ? t()
         : ((e, r) =>
-            c("Shared module " + r + " doesn't exist in shared scope " + e))(
+            p("Shared module " + r + " doesn't exist in shared scope " + e))(
             e,
             r
           )),
-    (g = (m = (e) =>
+    (g = (v = (e) =>
       function (r, t, o, n, a) {
-        var u = O.I(r);
+        var u = P.I(r);
         return u && u.then && !o
-          ? u.then(e.bind(e, r, O.S[r], t, !1, n, a))
-          : e(r, O.S[r], t, o, n, a);
+          ? u.then(e.bind(e, r, P.S[r], t, !1, n, a))
+          : e(r, P.S[r], t, o, n, a);
       })((e, r, t, o, n, a) => {
-      if (!u(r, t)) return v(e, t, a);
-      var l = s(r, t, n, o);
-      return l ? i(l) : a ? a() : void c(p(r, e, t, n, o));
+      if (!u(r, t)) return m(e, t, a);
+      var l = f(r, t, n, o);
+      return l ? i(l) : a ? a() : void p(c(r, e, t, n, o));
     })),
-    (b = m((e, r, t, o, n, l) => {
-      if (!u(r, t)) return v(e, t, l);
-      var s = f(r, t, o);
-      return a(n, s) || h(d(r, t, s, n)), i(r[t][s]);
+    (b = v((e, r, t, o, n, l) => {
+      if (!u(r, t)) return m(e, t, l);
+      var f = s(r, t, o);
+      return a(n, f) || h(d(r, t, f, n)), i(r[t][f]);
     })),
     (y = {}),
     (k = {
-      4914: () =>
+      914: () =>
         b("default", "react", !1, [1, 18, 2, 0], () =>
-          O.e(540).then(() => () => O(6540))
+          P.e(540).then(() => () => P(159))
         ),
-      676: () =>
-        b("default", "react-dom", !1, [1, 18, 3, 1], () =>
-          O.e(961).then(() => () => O(961))
+      672: () =>
+        b("default", "react-dom", !1, [1, 18, 2, 0], () =>
+          P.e(961).then(() => () => P(961))
         ),
-      9180: () =>
+      180: () =>
         g("default", "react-router-dom", !1, [1, 6, 28, 2], () =>
-          Promise.all([O.e(648), O.e(676)]).then(() => () => O(2648))
-        ),
-      8606: () =>
-        g("default", "axios", !1, [1, 1, 7, 9], () =>
-          O.e(447).then(() => () => O(4447))
+          P.e(648).then(() => () => P(648))
         ),
     }),
-    (j = { 180: [9180], 676: [676], 866: [8606], 914: [4914] }),
+    (j = { 665: [180], 672: [672], 914: [914] }),
     (w = {}),
-    (O.f.consumes = (e, r) => {
-      O.o(j, e) &&
+    (P.f.consumes = (e, r) => {
+      P.o(j, e) &&
         j[e].forEach((e) => {
-          if (O.o(y, e)) return r.push(y[e]);
+          if (P.o(y, e)) return r.push(y[e]);
           if (!w[e]) {
             var t = (r) => {
               (y[e] = 0),
-                (O.m[e] = (t) => {
-                  delete O.c[e], (t.exports = r());
+                (P.m[e] = (t) => {
+                  delete P.c[e], (t.exports = r());
                 });
             };
             w[e] = !0;
             var o = (r) => {
               delete y[e],
-                (O.m[e] = (t) => {
-                  throw (delete O.c[e], r);
+                (P.m[e] = (t) => {
+                  throw (delete P.c[e], r);
                 });
             };
             try {
@@ -378,22 +373,21 @@
         });
     }),
     (() => {
-      O.b = document.baseURI || self.location.href;
       var e = { 792: 0 };
-      O.f.j = (r, t) => {
-        var o = O.o(e, r) ? e[r] : void 0;
+      P.f.j = (r, t) => {
+        var o = P.o(e, r) ? e[r] : void 0;
         if (0 !== o)
           if (o) t.push(o[2]);
-          else if (/^(180|676|914)$/.test(r)) e[r] = 0;
+          else if (/^(672|914)$/.test(r)) e[r] = 0;
           else {
             var n = new Promise((t, n) => (o = e[r] = [t, n]));
             t.push((o[2] = n));
-            var a = O.p + O.u(r),
+            var a = P.p + P.u(r),
               u = new Error();
-            O.l(
+            P.l(
               a,
               (t) => {
-                if (O.o(e, r) && (0 !== (o = e[r]) && (e[r] = void 0), o)) {
+                if (P.o(e, r) && (0 !== (o = e[r]) && (e[r] = void 0), o)) {
                   var n = t && ("load" === t.type ? "missing" : t.type),
                     a = t && t.target && t.target.src;
                   (u.message =
@@ -415,16 +409,15 @@
             [a, u, i] = t,
             l = 0;
           if (a.some((r) => 0 !== e[r])) {
-            for (o in u) O.o(u, o) && (O.m[o] = u[o]);
-            i && i(O);
+            for (o in u) P.o(u, o) && (P.m[o] = u[o]);
+            i && i(P);
           }
           for (r && r(t); l < a.length; l++)
-            (n = a[l]), O.o(e, n) && e[n] && e[n][0](), (e[n] = 0);
+            (n = a[l]), P.o(e, n) && e[n] && e[n][0](), (e[n] = 0);
         },
-        t = (self.webpackChunkkta_memory_game =
-          self.webpackChunkkta_memory_game || []);
+        t = (self.webpackChunkkta_utchol = self.webpackChunkkta_utchol || []);
       t.forEach(r.bind(null, 0)), (t.push = r.bind(null, t.push.bind(t)));
     })(),
-    (O.nc = void 0),
-    O(4497);
+    (P.nc = void 0),
+    P(497);
 })();

@@ -1,4 +1,4 @@
-var kta_memory_game;
+var kta_utchol;
 (() => {
   "use strict";
   var e,
@@ -14,25 +14,27 @@ var kta_memory_game;
     f,
     d,
     h,
-    m,
     c,
     p,
     v,
+    m,
     g,
-    y,
     b,
+    y,
     k,
     w,
-    _,
-    S = {
-      1462: (e, r, t) => {
+    S,
+    j = {
+      61: (e, r, t) => {
         var o = {
-            "./MemoryGame": () =>
-              Promise.all([t.e(914), t.e(560)]).then(() => () => t(1560)),
-            "./LandingPage": () =>
-              Promise.all([t.e(914), t.e(180), t.e(539)]).then(
-                () => () => t(9539)
-              ),
+            "./App": () =>
+              Promise.all([
+                t.e(585),
+                t.e(914),
+                t.e(672),
+                t.e(665),
+                t.e(80),
+              ]).then(() => () => t(80)),
           },
           n = (e, r) => (
             (t.R = r),
@@ -60,33 +62,33 @@ var kta_memory_game;
         t.d(r, { get: () => n, init: () => a });
       },
     },
-    P = {};
-  function j(e) {
-    var r = P[e];
+    O = {};
+  function P(e) {
+    var r = O[e];
     if (void 0 !== r) return r.exports;
-    var t = (P[e] = { id: e, exports: {} });
-    return S[e](t, t.exports, j), t.exports;
+    var t = (O[e] = { id: e, exports: {} });
+    return j[e](t, t.exports, P), t.exports;
   }
-  (j.m = S),
-    (j.c = P),
-    (j.n = (e) => {
+  (P.m = j),
+    (P.c = O),
+    (P.n = (e) => {
       var r = e && e.__esModule ? () => e.default : () => e;
-      return j.d(r, { a: r }), r;
+      return P.d(r, { a: r }), r;
     }),
-    (j.d = (e, r) => {
+    (P.d = (e, r) => {
       for (var t in r)
-        j.o(r, t) &&
-          !j.o(e, t) &&
+        P.o(r, t) &&
+          !P.o(e, t) &&
           Object.defineProperty(e, t, { enumerable: !0, get: r[t] });
     }),
-    (j.f = {}),
-    (j.e = (e) =>
-      Promise.all(Object.keys(j.f).reduce((r, t) => (j.f[t](e, r), r), []))),
-    (j.u = (e) => e + ".js"),
-    (j.o = (e, r) => Object.prototype.hasOwnProperty.call(e, r)),
+    (P.f = {}),
+    (P.e = (e) =>
+      Promise.all(Object.keys(P.f).reduce((r, t) => (P.f[t](e, r), r), []))),
+    (P.u = (e) => e + ".js"),
+    (P.o = (e, r) => Object.prototype.hasOwnProperty.call(e, r)),
     (e = {}),
-    (r = "kta_memory_game:"),
-    (j.l = (t, o, n, a) => {
+    (r = "kta_utchol:"),
+    (P.l = (t, o, n, a) => {
       if (e[t]) e[t].push(o);
       else {
         var i, u;
@@ -109,7 +111,7 @@ var kta_memory_game;
           ((u = !0),
           ((i = document.createElement("script")).charset = "utf-8"),
           (i.timeout = 120),
-          j.nc && i.setAttribute("nonce", j.nc),
+          P.nc && i.setAttribute("nonce", P.nc),
           i.setAttribute("data-webpack", r + n),
           (i.src = t)),
           (e[t] = [o]);
@@ -133,24 +135,24 @@ var kta_memory_game;
           u && document.head.appendChild(i);
       }
     }),
-    (j.r = (e) => {
+    (P.r = (e) => {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
     (() => {
-      j.S = {};
+      P.S = {};
       var e = {},
         r = {};
-      j.I = (t, o) => {
+      P.I = (t, o) => {
         o || (o = []);
         var n = r[t];
         if ((n || (n = r[t] = {}), !(o.indexOf(n) >= 0))) {
           if ((o.push(n), e[t])) return e[t];
-          j.o(j.S, t) || (j.S[t] = {});
-          var a = j.S[t],
-            i = "kta_memory_game",
+          P.o(P.S, t) || (P.S[t] = {});
+          var a = P.S[t],
+            i = "kta_utchol",
             u = (e, r, t, o) => {
               var n = (a[e] = a[e] || {}),
                 u = n[r];
@@ -160,22 +162,21 @@ var kta_memory_game;
             l = [];
           return (
             "default" === t &&
-              (u("axios", "1.7.9", () => j.e(447).then(() => () => j(4447))),
-              u("react-dom", "18.3.1", () =>
-                Promise.all([j.e(961), j.e(914)]).then(() => () => j(961))
+              (u("react-dom", "18.3.1", () =>
+                Promise.all([P.e(961), P.e(914)]).then(() => () => P(961))
               ),
-              u("react-router-dom", "6.28.2", () =>
-                Promise.all([j.e(648), j.e(914), j.e(676)]).then(
-                  () => () => j(2648)
+              u("react-router-dom", "6.30.1", () =>
+                Promise.all([P.e(648), P.e(914), P.e(672)]).then(
+                  () => () => P(648)
                 )
               ),
-              u("react", "18.3.1", () => j.e(540).then(() => () => j(6540)))),
+              u("react", "18.3.1", () => P.e(540).then(() => () => P(159)))),
             (e[t] = l.length ? Promise.all(l).then(() => (e[t] = 1)) : 1)
           );
         }
       };
     })(),
-    (j.p = ""),
+    (P.p = ""),
     (t = (e) => {
       var r = (e) => e.split(".").map((e) => (+e == e ? +e : e)),
         t = /^([^-+]+)?(?:-([^+]+))?(?:\+(.+))?$/.exec(e),
@@ -276,14 +277,14 @@ var kta_memory_game;
         }
       }
       var h = [],
-        m = h.pop.bind(h);
+        c = h.pop.bind(h);
       for (i = 1; i < e.length; i++) {
-        var c = e[i];
-        h.push(1 == c ? m() | m() : 2 == c ? m() & m() : c ? a(c, r) : !m());
+        var p = e[i];
+        h.push(1 == p ? c() | c() : 2 == p ? c() & c() : p ? a(p, r) : !c());
       }
-      return !!m();
+      return !!c();
     }),
-    (i = (e, r) => e && j.o(e, r)),
+    (i = (e, r) => e && P.o(e, r)),
     (u = (e) => ((e.loaded = 1), e.get())),
     (l = (e) =>
       Object.keys(e).reduce((r, t) => (e[t].eager && (r[t] = e[t]), r), {})),
@@ -330,74 +331,74 @@ var kta_memory_game;
           .join(", ")
       );
     }),
-    (m = (e) => {
+    (c = (e) => {
       throw new Error(e);
     }),
-    (c = (e) => {
+    (p = (e) => {
       "undefined" != typeof console && console.warn && console.warn(e);
     }),
-    (v = (e, r, t) =>
+    (m = (e, r, t) =>
       t
         ? t()
         : ((e, r) =>
-            m("Shared module " + r + " doesn't exist in shared scope " + e))(
+            c("Shared module " + r + " doesn't exist in shared scope " + e))(
             e,
             r
           )),
-    (g = (p = (e) =>
+    (g = (v = (e) =>
       function (r, t, o, n, a) {
-        var i = j.I(r);
+        var i = P.I(r);
         return i && i.then && !o
-          ? i.then(e.bind(e, r, j.S[r], t, !1, n, a))
-          : e(r, j.S[r], t, o, n, a);
+          ? i.then(e.bind(e, r, P.S[r], t, !1, n, a))
+          : e(r, P.S[r], t, o, n, a);
       })((e, r, t, o, n, a) => {
-      if (!i(r, t)) return v(e, t, a);
+      if (!i(r, t)) return m(e, t, a);
       var l = s(r, t, n, o);
-      return l ? u(l) : a ? a() : void m(h(r, e, t, n, o));
+      return l ? u(l) : a ? a() : void c(h(r, e, t, n, o));
     })),
-    (y = p((e, r, t, o, n, l) => {
-      if (!i(r, t)) return v(e, t, l);
+    (b = v((e, r, t, o, n, l) => {
+      if (!i(r, t)) return m(e, t, l);
       var s = f(r, t, o);
-      return a(n, s) || c(d(r, t, s, n)), u(r[t][s]);
+      return a(n, s) || p(d(r, t, s, n)), u(r[t][s]);
     })),
-    (b = {}),
+    (y = {}),
     (k = {
-      4914: () =>
-        y("default", "react", !1, [1, 18, 2, 0], () =>
-          j.e(540).then(() => () => j(6540))
+      914: () =>
+        b("default", "react", !1, [1, 18, 2, 0], () =>
+          P.e(540).then(() => () => P(159))
         ),
-      676: () =>
-        y("default", "react-dom", !1, [1, 18, 3, 1], () =>
-          j.e(961).then(() => () => j(961))
+      672: () =>
+        b("default", "react-dom", !1, [1, 18, 2, 0], () =>
+          P.e(961).then(() => () => P(961))
         ),
-      9180: () =>
+      180: () =>
         g("default", "react-router-dom", !1, [1, 6, 28, 2], () =>
-          Promise.all([j.e(648), j.e(676)]).then(() => () => j(2648))
+          P.e(648).then(() => () => P(648))
         ),
     }),
-    (w = { 180: [9180], 676: [676], 914: [4914] }),
-    (_ = {}),
-    (j.f.consumes = (e, r) => {
-      j.o(w, e) &&
+    (w = { 665: [180], 672: [672], 914: [914] }),
+    (S = {}),
+    (P.f.consumes = (e, r) => {
+      P.o(w, e) &&
         w[e].forEach((e) => {
-          if (j.o(b, e)) return r.push(b[e]);
-          if (!_[e]) {
+          if (P.o(y, e)) return r.push(y[e]);
+          if (!S[e]) {
             var t = (r) => {
-              (b[e] = 0),
-                (j.m[e] = (t) => {
-                  delete j.c[e], (t.exports = r());
+              (y[e] = 0),
+                (P.m[e] = (t) => {
+                  delete P.c[e], (t.exports = r());
                 });
             };
-            _[e] = !0;
+            S[e] = !0;
             var o = (r) => {
-              delete b[e],
-                (j.m[e] = (t) => {
-                  throw (delete j.c[e], r);
+              delete y[e],
+                (P.m[e] = (t) => {
+                  throw (delete P.c[e], r);
                 });
             };
             try {
               var n = k[e]();
-              n.then ? r.push((b[e] = n.then(t).catch(o))) : t(n);
+              n.then ? r.push((y[e] = n.then(t).catch(o))) : t(n);
             } catch (e) {
               o(e);
             }
@@ -405,22 +406,21 @@ var kta_memory_game;
         });
     }),
     (() => {
-      j.b = document.baseURI || self.location.href;
-      var e = { 236: 0 };
-      j.f.j = (r, t) => {
-        var o = j.o(e, r) ? e[r] : void 0;
+      var e = { 161: 0 };
+      P.f.j = (r, t) => {
+        var o = P.o(e, r) ? e[r] : void 0;
         if (0 !== o)
           if (o) t.push(o[2]);
-          else if (/^(180|676|914)$/.test(r)) e[r] = 0;
+          else if (/^(672|914)$/.test(r)) e[r] = 0;
           else {
             var n = new Promise((t, n) => (o = e[r] = [t, n]));
             t.push((o[2] = n));
-            var a = j.p + j.u(r),
+            var a = P.p + P.u(r),
               i = new Error();
-            j.l(
+            P.l(
               a,
               (t) => {
-                if (j.o(e, r) && (0 !== (o = e[r]) && (e[r] = void 0), o)) {
+                if (P.o(e, r) && (0 !== (o = e[r]) && (e[r] = void 0), o)) {
                   var n = t && ("load" === t.type ? "missing" : t.type),
                     a = t && t.target && t.target.src;
                   (i.message =
@@ -442,17 +442,16 @@ var kta_memory_game;
             [a, i, u] = t,
             l = 0;
           if (a.some((r) => 0 !== e[r])) {
-            for (o in i) j.o(i, o) && (j.m[o] = i[o]);
-            u && u(j);
+            for (o in i) P.o(i, o) && (P.m[o] = i[o]);
+            u && u(P);
           }
           for (r && r(t); l < a.length; l++)
-            (n = a[l]), j.o(e, n) && e[n] && e[n][0](), (e[n] = 0);
+            (n = a[l]), P.o(e, n) && e[n] && e[n][0](), (e[n] = 0);
         },
-        t = (self.webpackChunkkta_memory_game =
-          self.webpackChunkkta_memory_game || []);
+        t = (self.webpackChunkkta_utchol = self.webpackChunkkta_utchol || []);
       t.forEach(r.bind(null, 0)), (t.push = r.bind(null, t.push.bind(t)));
     })(),
-    (j.nc = void 0);
-  var O = j(1462);
-  kta_memory_game = O;
+    (P.nc = void 0);
+  var E = P(61);
+  kta_utchol = E;
 })();
